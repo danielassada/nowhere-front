@@ -23,6 +23,7 @@ import Streams from "components/streams/Streams";
 import Hermicraft from "components/streams/Hermicraft";
 import StreamsGirls from "components/streams/StreamsGirls";
 import Tft from "components/games/Tft";
+import Search from "components/search/Search"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -61,6 +62,7 @@ ReactDOM.render(
           component={props => <News {...props} />}
         />
         <Route path="/songs" component={props => <Songs {...props} />} />
+        <Route path="/search" component={props => <Search {...props} />} />
         <Route path="/streams" component={props => <Streams {...props} />} />
         <Route path="/slrig" component={props => <StreamsGirls {...props} />} />
         <Route path="/cebola" component={props => <Cebola {...props} />} />
