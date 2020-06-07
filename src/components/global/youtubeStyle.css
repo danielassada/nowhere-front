@@ -1,0 +1,14 @@
+.youtube {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  background-color: lightgray;
+}
+.item {
+  background-color: ghostwhite;
+}
+.item h2 {
+  color: rebeccapurple;
+  text-shadow: 2px 2px palegreen;
+}

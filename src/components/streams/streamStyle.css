@@ -1,0 +1,37 @@
+.online {
+  background-color: #28b779 !important;
+  display: -webkit-box;
+}
+
+.logo {
+  border-radius: 50%;
+  border: 5px solid #33001a;
+  width: 100px;
+  height: 100px;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+.desc {
+  margin: auto;
+}
+.online h2 {
+  margin: 3px;
+  text-shadow: 2px 2px #79a;
+}
+.offline {
+  display: -webkit-box;
+  width: 100%;
+  text-shadow: 2px 2px #79a;
+  display: -webkit-box;
+  width: 100%;
+  background-color: #daa !important;
+}
+.streamsList {
+  width: 80vw;
+  margin: auto;
+  background: white;
+}
+.streamsList a {
+  width: 95%;
+  margin: auto;
+}

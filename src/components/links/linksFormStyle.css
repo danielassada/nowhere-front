@@ -1,0 +1,24 @@
+#linksForm {
+}
+.field {
+  border: none;
+}
+.puller {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+label {
+  color: #FFF !important;
+  background: unset;
+  font-weight: 700;
+}
+.visible {
+  position: absolute !important;
+  width: 90vw;
+  margin: 5vw;
+  height: 80vh;
+  top: 0;
+  position: absolute;
+}

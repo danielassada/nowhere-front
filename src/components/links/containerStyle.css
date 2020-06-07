@@ -1,0 +1,36 @@
+#linkentre a {
+  font-size: 21px;
+}
+
+#links-container {
+  background-color: #19171c;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: -webkit-fill-available;
+}
+
+#links-container div:hover span {
+  transform: scale(1);
+  right: 0;
+  position: absolute;
+  z-index: 10;
+}
+span.description {
+  position: absolute;
+  top: 0px;
+  font-size: 15px;
+  width: 95vw;
+  left: 0;
+  text-align: center;
+  background: #fff;
+  display: block;
+  color: #000;
+  font-family: bitter;
+  border: 7px solid darkviolet;
+  transform: scale(0);
+}
+
+.hide {
+  display: none;
+}

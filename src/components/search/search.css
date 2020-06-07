@@ -1,0 +1,22 @@
+.card {
+    background: aliceblue;
+    display: grid;
+    align-content: center;
+    width: fit-content;
+}
+.card a {
+    align-self: center;
+    margin: auto;
+    font-size: 22px;
+    background-color: #3300aa;
+    border: #660099 solid 3px;
+    color: white;
+    border-radius: 10%;
+}
+.robotic {
+    font-family: monospace;
+    color: cadetblue;
+}
+.light-green{
+    background-color:#aaffa5!important;
+}

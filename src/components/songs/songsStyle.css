@@ -1,0 +1,35 @@
+.hidden {
+  display: none !important;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+}
+.sideBar {
+  height: 500px;
+  display: grid;
+  grid-row-gap: 10px;
+  background-color: #f0f0f0;
+}
+.sideBar button {
+  height: 50px;
+  width: 155px;
+  margin: auto !important;
+}
+.sideBar i {
+  margin: auto;
+}
+.songForm {
+  background-color: #d3d3d3;
+  border: 5px solid white;
+}
+.songs {
+  display: grid;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.songDetail {
+  background-color: #d3d3d3;
+}

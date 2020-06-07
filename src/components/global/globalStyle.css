@@ -1,0 +1,17 @@
+#global-container {
+  top: 25px;
+  left: 0;
+  position: absolute;
+  /*font-size: 35px;*/
+  color: #a9e;
+  width: 100%;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+}
+.api_icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
