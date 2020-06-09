@@ -1,6 +1,5 @@
 import React from "react";
 import StreamCard from "./StreamCard";
-import MixerCard from "./MixerCard";
 
 class Streams extends React.Component {
   renderList() {
@@ -38,18 +37,13 @@ class Streams extends React.Component {
       return <StreamCard channel={stream} />;
     });
   }
-  renderMixer() {
-    const mixers = ["TangoTek", "impulseSV"];
-    return mixers.map(mixerUser => {
-      return <MixerCard channel={mixerUser} />;
-    });
-  }
+  
   render() {
     return (
       <div className="streamsList">
         <h2>Streams</h2>
         {this.renderList()}
-        {this.renderMixer()}
+        
       </div>
     );
   }

@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
 import Popup from "components/Popup";
-import "./newsStyle.css";
+
+import "./newsStyle.scss";
+import Card from "./Card";
 
 class News extends React.Component {
   state = { articles: [] };
@@ -27,20 +29,7 @@ class News extends React.Component {
     if (this.state.articles) {
       return this.state.articles.map((article, i) => {
         return (
-          <React.Fragment>
-            <div className="article" key={`article${i}`}>
-              <h5>{article.id}</h5>
-              <div className="img-container">
-                <img src={article.urlToImage} alt={`notice-img-${i}`} />
-              </div>
-              <div className="left">
-                <p>author: {article.author}</p>
-                <p>description: {article.description}</p>
-                <a href={article.url}>Fonte</a>
-              </div>
-            </div>
-            <div class="ui divider" />
-          </React.Fragment>
+              <Card article={article} key={i}/>
         );
       });
     }

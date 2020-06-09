@@ -35,7 +35,7 @@ class StreamCard extends React.Component {
     if (this.state.response.stream) {
       return (
         <a className="online" href={this.state.response.stream.channel.url}>
-          <img className="logo" src={this.state.response.stream.channel.logo} />
+          <img className="logo" alt="logo-channel"src={this.state.response.stream.channel.logo} />
           <div className="desc">
             <h2>{this.state.response.stream.channel.display_name}</h2>
             <br />
@@ -68,7 +68,6 @@ class StreamCard extends React.Component {
     return null;
   }
   render() {
-    return <div>{this.renderContent()}</div>;
     return <div>{this.renderContent()}</div>;
   }
 }

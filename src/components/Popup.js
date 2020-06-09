@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import "components/popupStyle.css";
+import "components/popupStyle.scss";
 class Popup extends React.Component {
   render() {
     return ReactDOM.createPortal(

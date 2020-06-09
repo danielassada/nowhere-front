@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import "./HeaderStyle.css";
-import GoogleAuth from "./auth/GoogleAuth";
+import "components/HeaderStyle.css";
+import GoogleAuth from "components/auth/GoogleAuth";
+
 class Header extends React.Component {
+
   renderLinks() {
     if (this.props.googleAuth) {
       return (
@@ -14,18 +16,10 @@ class Header extends React.Component {
           <GoogleAuth />
         </div>
       );
-    } else if (this.props.authenticated) {
-      return (
-        <div className="right menu">
-          <Link className="item" to="/feature">
-            Feature
-          </Link>
-          <Link to="/signout">Sign Out</Link>
-        </div>
-      );
     } else {
       return (
         <div className="right menu">
+          
           <Link className="item" to="/signup">
             Sign up
           </Link>
@@ -50,8 +44,8 @@ class Header extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    authenticated: state.auth.authenticated,
-    googleAuth: state.auth.isSignIn
+    googleAuth: (state.auth===true)
   };
 };
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps,null)(Header);
+

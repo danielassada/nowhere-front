@@ -9,9 +9,13 @@ import {
     genericResponse: "",
   };
   
-  export default function(state = INITIAL_STATE, action) {
-    switch (action.type) {
-      
+
+
+
+
+
+export default function(state = INITIAL_STATE, action) {
+  switch (action.type) {      
       case ADD_LINK:
         return { ...state, genericResponse: action.payload };
       case GET_LINKS:

@@ -6,30 +6,30 @@ import {
 } from "../actions/types";
 
 const INITIAL_STATE = {
-  authenticated: "",
+  userName: "",
   errorMessage: "",
   genericResponse: "",
   isSignedIn: false,
-  userId: null,
-  contentKey: null
+  userId: undefined,
+  contentKey: undefined
 };
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case AUTH_USER:
-      return { ...state, authenticated: action.payload };
+      return { ...state, isSignedIn: action.payload };
     case AUTH_ERROR:
       return { ...state, errorMessage: action.payload };
     case SIGN_IN:
-      return { ...state, userId: action.payload, isSignIn: true };
+      return { ...state, userId: action.payload.user.uid, userName: action.payload.user.displayName, isSignIn: true };
     case SIGN_OUT:
       return {
         ...state,
-        authenticated: "",
         isSignIn: false,
-        userId: null
+        userName:'',
+        userId: undefined
       };
-    
+  
     default:
       return state;
   }

@@ -1,3 +1,5 @@
+/* The reason to build separeted file with action is to make data globally available in the app */
+import {googleSignInFirebase, auth } from 'firebase/firebase.utils';
 import axios from "axios";
 import {
   AUTH_USER,
@@ -39,13 +41,22 @@ export const signin = (formProps, callback) => async dispatch => {
   }
 };
 
-export const googleSignIn = userId => {
-  return {
-    type: SIGN_IN,
-    payload: userId
-  };
+export const googleSignIn = callback => async dispatch => {
+  try {
+    
+    const response = await googleSignInFirebase();
+    
+    localStorage.setItem("token", response.user.uid);
+    dispatch({ type: SIGN_IN, payload: response });
+    callback();
+  } catch (e) {
+    dispatch({ type: AUTH_ERROR, payload: "Invalid login credentials" });
+  }
 };
-export const signOut = () => {
+
+
+export const signOutGoogle = () => {
+  auth.signOut();
   localStorage.removeItem("token");
   return {
     type: SIGN_OUT
