@@ -93,10 +93,10 @@ export default () => {
               </a>
               <a
                 id="cult"
-                href="https://www.wkstats.com/"
+                href="#"
                 className="ui violet button"
               >
-                wkstats
+                league of legends
               </a>
               <a
                 id="cult"

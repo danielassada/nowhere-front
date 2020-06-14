@@ -1,5 +1,6 @@
 /* The reason to build separeted file with action is to make data globally available in the app */
-import {googleSignInFirebase, auth } from 'firebase/firebase.utils';
+import firebase from 'firebase';
+import {googleSignInFirebase, auth, createUserProfileDocument } from 'firebase/firebase.utils';
 import axios from "axios";
 import {
   AUTH_USER,
@@ -45,7 +46,7 @@ export const googleSignIn = callback => async dispatch => {
   try {
     
     const response = await googleSignInFirebase();
-    
+    createUserProfileDocument(response.user);
     localStorage.setItem("token", response.user.uid);
     dispatch({ type: SIGN_IN, payload: response });
     callback();
