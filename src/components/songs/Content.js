@@ -9,9 +9,20 @@ class Content extends React.Component {
     hideExciting: "",
     hidePositive: "",
     hideNegative: "",
-    hideOldButGold: ""
-  };
+    hideOldButGold: "",
+    songs : [{
+      relax: false,
+      excit: false,
+      posit: true,
+      negat: true,
+      old_b: true,
+      music: 'sx',
+      duration: '0:00',
+      author: 'me'
 
+    }]
+  };
+    
   componentDidMount() {
     this.props.getSongs(() => {
       console.log("received");
@@ -45,8 +56,8 @@ class Content extends React.Component {
     }
   }
   renderContent() {
-    if (this.props.songs) {
-      return this.props.songs.songs.map((song, i) => {
+  
+      return this.state.songs.map((song, i) => {
         const relax = song.relax === false ? "relax " : this.state.hideRelax;
         const exciting =
           song.exciting === false ? "exciting " : this.state.hideExciting;
@@ -69,7 +80,7 @@ class Content extends React.Component {
           </div>
         );
       });
-    }
+    
     return <div>Loading...</div>;
   }
   render() {
